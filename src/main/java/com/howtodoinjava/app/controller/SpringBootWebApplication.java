@@ -2,11 +2,10 @@ package com.howtodoinjava.app.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
-public class SpringBootWebApplication {//extends SpringBootServletInitializer {
+public class SpringBootWebApplication {// extends SpringBootServletInitializer {
 
 	/*
 	 * @Override protected SpringApplicationBuilder
@@ -17,4 +16,9 @@ public class SpringBootWebApplication {//extends SpringBootServletInitializer {
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(SpringBootWebApplication.class, args);
 	}
-}	
+
+	@GetMapping
+	public String welcome() {
+		return "Welcome to Spring boot";
+	}
+}
